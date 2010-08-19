@@ -3,17 +3,15 @@
 %define		_subclass	NL
 %define		_status		alpha
 %define		_pearname	Validate_NL
-
 Summary:	%{_pearname} - Validation class for NL
 Summary(pl.UTF-8):	%{_pearname} - Klasa sprawdzająca poprawność dla Holandii
 Name:		php-pear-%{_pearname}
-Version:	0.5.1
-Release:	2
-Epoch:		0
+Version:	0.5.2
+Release:	1
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	cac0e79fb5753930bd88b0daa3ee2dd1
+# Source0-md5:	8fa910866ad96db1bd1cc6ecfca55740
 URL:		http://pear.php.net/package/Validate_NL/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -45,7 +43,7 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
 
 %description tests
@@ -70,6 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Validate/NL.php
+
+%{php_pear_dir}/data/Validate_NL
 
 %files tests
 %defattr(644,root,root,755)
